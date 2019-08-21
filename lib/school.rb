@@ -14,7 +14,7 @@ class School
       @roster[year] << student
     end
   end
-  def grade(year)
+  def grade(grade)
     @roster[grade]
   end
   def sort
