@@ -12,6 +12,7 @@ class School
     else
       @roster[year] = []
       @roster[year] << student
+    end
   end
   def grade(year)
     roster.detect do |x, y|
