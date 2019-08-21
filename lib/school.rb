@@ -1,14 +1,18 @@
 # code here!
 class School
-  attr_accessor :roster
+  attr_accessor :roster, :student
   attr_reader
 
-  def initialize(roster)
+  def initialize(roster, student)
+    @student
     @roster = {}
   end
   def add_student(student,year)
-    roster[year] ||= []
-    roster[year] << student
+    if @roster[year]
+      @roster[year] << student
+    else
+      @roster[year] = []
+      @roster[year] << student
   end
   def grade(year)
     roster.detect do |x, y|
