@@ -7,10 +7,13 @@ class School
     @roster = {}
   end
   def add_student(student,year)
-    if @roster[year]
-      @roster[year] << student
-    else
-      @roster[year] = []
+    # if @roster[year]
+    #   @roster[year] << student
+    # else
+    #   @roster[year] = []
+    #   @roster[year] << student
+    # end
+    if @roster[year] ||= []
       @roster[year] << student
     end
   end
