@@ -15,11 +15,7 @@ class School
     end
   end
   def grade(year)
-    roster.detect do |x, y|
-      if x == year
-         return y
-      end
-    end
+    @roster[grade]
   end
   def sort
     sorted_students = {}
